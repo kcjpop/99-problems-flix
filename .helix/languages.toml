@@ -1,0 +1,11 @@
+[[language]]
+
+name = "flix"
+scope = "source.flix"
+injection-regex = "flix"
+file-types = ["flix"]
+comment-token = "///"
+roots = ["flix.toml"]
+indent = { tab-width = 2, unit = "  " }
+# language-server = { command = "java", args = ["-jar", "/Users/an/nw/flix.jar", "lsp", "6008"] }
+language-server = { command = "nc", args = ["127.0.0.1", "6008"] }

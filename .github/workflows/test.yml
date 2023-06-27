@@ -1,0 +1,28 @@
+name: Tests
+
+on:
+  - push
+  - pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        java: ["11", "16", "17"]
+    name: Java ${{ matrix.Java }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: ${{ matrix.java }}
+      - name: Setup Flix
+        uses: robinraju/release-downloader@v1.8
+        with:
+          repository: flix/flix
+          latest: true
+          fileName: "flix.jar"
+      - name: Run tests
+        run: java -jar flix.jar test
