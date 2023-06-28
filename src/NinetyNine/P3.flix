@@ -7,10 +7,10 @@ def nth(l: List[t], n: Int32): Option[t] =
     aux(l, 0)
 
 @Test
-def testNth01(): Bool = Assert.eq(nth(1 :: 2 :: Nil, 0), Some(1))
+def testNth01(): Bool = Assert.eq(Some(1), nth(1 :: 2 :: Nil, 0))
 
 @Test
-def testNth02(): Bool = Assert.eq(nth(1 :: 2 :: Nil, 1), Some(2))
+def testNth02(): Bool = Assert.eq(Some(2), nth(1 :: 2 :: Nil, 1))
 
 @Test
 def testNth03(): Bool = nth(1 :: 2 :: Nil, 3) |> Option.isEmpty
@@ -19,7 +19,7 @@ def testNth03(): Bool = nth(1 :: 2 :: Nil, 3) |> Option.isEmpty
 def testNth04(): Bool = nth(Nil, 1) |> Option.isEmpty
 
 @Test
-def testNth05(): Bool = Assert.eq(nth("a" :: "b" :: "c" :: "d" :: "e" :: Nil, 2), Some("c"))
+def testNth05(): Bool = Assert.eq(Some("c"), nth("a" :: "b" :: "c" :: "d" :: "e" :: Nil, 2))
 
 @Test
 def testNth06(): Bool = nth("a" :: Nil, 2) |> Option.isEmpty

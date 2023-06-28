@@ -7,10 +7,10 @@ def length(l: List[t]): Int32 =
     aux(l, 0)
 
 @Test
-def testLength01(): Bool = Assert.eq(length(1 :: 2 :: 3 :: Nil), 3)
+def testLength01(): Bool = Assert.eq(3, length(1 :: 2 :: 3 :: Nil))
 
 @Test
-def testLength02(): Bool = Assert.eq(length(1 :: 2 :: Nil), 2)
+def testLength02(): Bool = Assert.eq(2, length(1 :: 2 :: Nil))
 
 @Test
-def testLength03(): Bool = Assert.eq(length(Nil), 0)
+def testLength03(): Bool = Assert.eq(0, length(Nil))

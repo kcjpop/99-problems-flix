@@ -7,10 +7,10 @@ def rev(l: List[t]): List[t] =
     aux(l, Nil)
 
 @Test
-def testRev01(): Bool = Assert.eq(rev(1 :: 2 :: 3 :: Nil), 3 :: 2 :: 1 :: Nil)
+def testRev01(): Bool = Assert.eq(3 :: 2 :: 1 :: Nil, rev(1 :: 2 :: 3 :: Nil))
 
 @Test
-def testRev02(): Bool = Assert.eq(rev(1 :: 2 :: Nil), 2 :: 1 :: Nil)
+def testRev02(): Bool = Assert.eq(2 :: 1 :: Nil, rev(1 :: 2 :: Nil))
 
 // @Test
 def testRev03(): Bool = Assert.eq(rev(Nil) |> List.length, 0)
