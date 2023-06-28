@@ -1,6 +1,6 @@
 [package]
-name        = "flix-fun"
-description = "Some util functions implemented in Flix, for fun"
+name        = "99-problems-flix"
+description = "99 problems solved in Flix"
 version     = "0.1.0"
 flix        = "0.38.0"
 authors     = ["An Cao <kcj.pop.com@gmail.com>"]
